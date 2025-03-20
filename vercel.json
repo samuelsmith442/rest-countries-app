@@ -8,12 +8,19 @@
     "remotePatterns": [
       {
         "protocol": "https",
-        "hostname": "flagcdn.com"
+        "hostname": "flagcdn.com",
+        "pathname": "**"
       },
       {
         "protocol": "https",
-        "hostname": "upload.wikimedia.org"
+        "hostname": "upload.wikimedia.org",
+        "pathname": "**"
       }
-    ]
+    ],
+    "sizes": [16, 32, 48, 64, 96, 128, 256, 384, 512, 1024, 2048],
+    "minimumCacheTTL": 60
+  },
+  "env": {
+    "NEXT_PUBLIC_VERCEL_ENV": "production"
   }
 }

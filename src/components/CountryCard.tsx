@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import FallbackImage from './FallbackImage';
 import { Country } from '@/types';
 
 interface CountryCardProps {
@@ -22,7 +22,7 @@ export default function CountryCard({ country }: CountryCardProps) {
       className="block rounded-md overflow-hidden shadow-md bg-white dark:bg-dark-blue hover:transform hover:scale-105 transition-transform duration-300"
     >
       <div className="relative h-40 w-full">
-        <Image
+        <FallbackImage
           src={flags.svg}
           alt={`Flag of ${name}`}
           fill

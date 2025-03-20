@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { ArrowLeftIcon } from '@/components/Icons';
+import FallbackImage from '@/components/FallbackImage';
 import { Country } from '@/types';
 
 export default function CountryDetail() {
@@ -110,7 +110,7 @@ export default function CountryDetail() {
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div className="relative aspect-[4/3] w-full">
-          <Image
+          <FallbackImage
             src={country.flags.svg}
             alt={`Flag of ${country.name}`}
             fill

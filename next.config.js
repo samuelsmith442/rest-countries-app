@@ -2,6 +2,19 @@
 const nextConfig = {
   images: {
     domains: ['flagcdn.com', 'upload.wikimedia.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'flagcdn.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        pathname: '**',
+      },
+    ],
+    unoptimized: process.env.NODE_ENV === 'production',
   },
   // Fix the data.json path issue by copying it to the public folder during build
   async rewrites() {
